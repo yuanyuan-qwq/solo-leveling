@@ -242,7 +242,7 @@ public class ArrayListSetMap {
                 case 6 -> mapOfMaps();
                 case 7 -> treeMap();
                 case 0 -> {
-                    System.out.println("Exiting CLI. Goodbye!");
+                    System.out.println("Exiting.... Goodbye!");
                     return;
                 }
                 default -> System.out.println("Invalid choice. Try again.");
