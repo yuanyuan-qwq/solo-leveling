@@ -1,4 +1,6 @@
-import leetcode.gambatte;
+//import leetcode.*;
+//import hackerrank.*;
+import dataStructure.ArrayListSetMap;
 
 public class Main {
 
@@ -6,8 +8,9 @@ public class Main {
 
         System.out.println("Hello and welcome!");
 
-        gambatte gambatte = new gambatte();
+        ArrayListSetMap arrayListSetMap = new ArrayListSetMap();
+        arrayListSetMap.CLI();
 
-        gambatte.printSomething();
+
     }
 }
