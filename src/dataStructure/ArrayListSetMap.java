@@ -1,5 +1,6 @@
 package dataStructure;
 
+import java.io.*;
 import java.util.*;
 
 public class ArrayListSetMap {
@@ -212,6 +213,27 @@ public class ArrayListSetMap {
         System.out.println("Key lower than 'Charlie': " + scores.lowerKey("Charlie"));
     }
 
+    //========================================== addition knowledge ==========================================================================
+    public void DemoTransient(){  //alternate way is using DTO for data passing
+        User user = new User("U001", "John Doe", "S1234567A", 30);
+
+        // Serialize to file
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("user.ser"))) {
+            out.writeObject(user);
+            System.out.println("Serialized: " + user);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Deserialize from file
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("user.ser"))) {
+            User deserializedUser = (User) in.readObject();
+            System.out.println("Deserialized: " + deserializedUser);
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
     //--------------------------------------------------------------------------------------------------------------------
@@ -227,6 +249,7 @@ public class ArrayListSetMap {
             System.out.println("5. Map of Lists");
             System.out.println("6. Map of Maps");
             System.out.println("7. Tree Maps");
+            System.out.println("8. DemoTransient");
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
 
@@ -241,6 +264,7 @@ public class ArrayListSetMap {
                 case 5 -> mapOfLists();
                 case 6 -> mapOfMaps();
                 case 7 -> treeMap();
+                case 8 -> DemoTransient();
                 case 0 -> {
                     System.out.println("Exiting.... Goodbye!");
                     return;

@@ -1,9 +1,13 @@
 package dataStructure;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
+    private static final long serialVersionUID = -7660008245406990218L;
+
     String userId;
     String userName;
-    String nric;
+    transient String nric;
     int age;
 
     public User() {
