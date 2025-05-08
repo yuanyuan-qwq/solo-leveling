@@ -5,20 +5,21 @@ import java.io.Serializable;
 public class User implements Serializable {
     private static final long serialVersionUID = -7660008245406990218L;
 
-    String userId;
-    String userName;
-    transient String nric;
-    int age;
-    String nation;
+    private String userId;
+    private String userName;
+    private transient String nric;
+    private int age;
+    private String nation;
 
     public User() {
     }
 
-    public User(String userId, String userName, String nric, int age) {
+    public User(String userId, String userName, String nric, int age, String nation) {
         this.userId = userId;
         this.userName = userName;
         this.nric = nric;
         this.age = age;
+        this.nation = nation;
     }
 
     public String getUserId() {
