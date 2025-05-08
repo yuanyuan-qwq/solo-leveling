@@ -9,6 +9,7 @@ public class User implements Serializable {
     String userName;
     transient String nric;
     int age;
+    String nation;
 
     public User() {
     }
@@ -52,13 +53,22 @@ public class User implements Serializable {
         this.age = age;
     }
 
-    @Override
-    public String toString() {
+    public String getNation() {
+        return nation;
+    }
+
+    public void setNation(String nation) {
+        this.nation = nation;
+    }
+
+    @java.lang.Override
+    public java.lang.String toString() {
         return "User{" +
                 "userId='" + userId + '\'' +
                 ", userName='" + userName + '\'' +
                 ", nric='" + nric + '\'' +
                 ", age=" + age +
+                ", nation='" + nation + '\'' +
                 '}';
     }
 }
