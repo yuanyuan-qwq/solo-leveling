@@ -215,7 +215,7 @@ public class ArrayListSetMap {
 
     //========================================== addition knowledge ==========================================================================
     public void DemoTransient(){  //alternate way is using DTO for data passing
-        User user = new User("U001", "John Doe", "S1234567A", 30);
+        User user = new User("U001", "John Doe", "S1234567A", 30, "Singapore");
 
         // Serialize to file
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("user.ser"))) {
