@@ -1,7 +1,7 @@
 //import leetcode.*;
 //import hackerrank.*;
 import dataStructure.ArrayListSetMap;
-import specialTopic.Fibonacci;
+import specialTopic.LogicTraining;
 
 public class Main {
 
@@ -9,11 +9,11 @@ public class Main {
 
         System.out.println("Hello and welcome!");
 
-        ArrayListSetMap arrayListSetMap = new ArrayListSetMap();
-        arrayListSetMap.CLI();
+//        ArrayListSetMap arrayListSetMap = new ArrayListSetMap();
+//        arrayListSetMap.CLI();
 
-//        Fibonacci fibonacci = new Fibonacci();
-//        fibonacci.fibonacciExample();
-
+        LogicTraining logicTraining = new LogicTraining();
+//        logicTraining.fibonacciExample();
+        logicTraining.pyramidPattern();
     }
 }
